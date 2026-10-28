@@ -1,0 +1,391 @@
+/* Basic CSS3 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: #fff8fb;
+}
+
+/* Navigation - Flexbox */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #d63384;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #d63384;
+}
+
+/* Hero - Flexbox */
+.hero {
+    min-height: 600px;
+    padding: 70px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.small-title {
+    color: #d63384;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin: 15px 0;
+    line-height: 1.1;
+}
+
+.description {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.buy-button {
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+    background: #d63384;
+    color: white;
+    padding: 13px 28px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.buy-button:hover {
+    background: #b82b70;
+}
+
+/* Simple product illustration */
+.product-box {
+    width: 330px;
+    height: 330px;
+    background: #ffd6e8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottle {
+    width: 130px;
+    height: 210px;
+    background: white;
+    border-radius: 12px 12px 25px 25px;
+    border: 3px solid #d63384;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #d63384;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.bottle::before {
+    content: "";
+    width: 65px;
+    height: 35px;
+    background: #d63384;
+    position: absolute;
+    margin-top: -245px;
+    border-radius: 7px 7px 0 0;
+}
+
+.bottle span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.bottle small {
+    margin-top: 8px;
+}
+
+/* Common Section */
+.section {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.section-text {
+    color: #777;
+    margin-bottom: 40px;
+}
+
+/* Features - CSS Grid */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+}
+
+.icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #777;
+    line-height: 1.5;
+}
+
+/* Benefits - Flexbox */
+.benefits {
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    background: #ffeaf3;
+}
+
+.benefit-image {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    background: #f8b6d1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.benefit-content {
+    max-width: 500px;
+}
+
+.benefit-content h2 {
+    font-size: 38px;
+    margin: 12px 0 20px;
+}
+
+.benefit-content p {
+    line-height: 1.7;
+    color: #666;
+}
+
+.benefit-content ul {
+    list-style: none;
+    margin-top: 20px;
+    line-height: 2;
+    color: #555;
+}
+
+/* Reviews - Grid */
+.reviews-section {
+    background: white;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.review-card {
+    padding: 25px;
+    background: #fff8fb;
+    border-radius: 15px;
+}
+
+.review-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.review-card h4 {
+    color: #d63384;
+}
+
+/* Pricing */
+.pricing {
+    padding: 70px 20px;
+    text-align: center;
+    background: #ffd6e8;
+}
+
+.pricing h2 {
+    font-size: 35px;
+    margin: 12px 0;
+}
+
+.price {
+    font-size: 42px;
+    font-weight: bold;
+    color: #d63384;
+    margin-bottom: 5px;
+}
+
+.pricing .buy-button {
+    margin-top: 25px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #2f2430;
+    color: white;
+    padding: 40px 20px;
+}
+
+footer h3 {
+    color: #ff9bc5;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin: 7px;
+    color: #ddd;
+}
+
+.copyright {
+    margin-top: 20px !important;
+    font-size: 13px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .hero {
+        padding-top: 50px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .benefits {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 55px 6%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .product-box {
+        width: 260px;
+        height: 260px;
+    }
+
+    .feature-grid,
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefits {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 6%;
+    }
+
+    .benefit-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .circle {
+        width: 165px;
+        height: 165px;
+        font-size: 24px;
+    }
+
+    .benefit-content h2 {
+        font-size: 30px;
+    }
+}
