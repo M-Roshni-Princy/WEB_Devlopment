@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple weather and movie search project built with HTML, CSS and JavaScript.">
+  <title>Weather & Movie Finder</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Weather and Movie Finder home">daylight<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#weather">Weather</a>
+      <a href="#movies">Movies</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <p class="eyebrow">YOUR LITTLE EVERYDAY TOOL</p>
+      <h1>Check the sky.<br><span>Pick a movie.</span></h1>
+      <p class="intro-copy">A quick look at the weather, followed by something good to watch.</p>
+    </section>
+
+    <section class="panel weather-panel" id="weather">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">RIGHT NOW</p>
+          <h2>Weather finder</h2>
+        </div>
+        <span class="round-icon" aria-hidden="true">☀</span>
+      </div>
+      <form id="weather-form" class="search-form">
+        <label class="sr-only" for="city-input">City name</label>
+        <input id="city-input" name="city" type="text" placeholder="Enter a city, e.g. Delhi" autocomplete="off" required>
+        <button type="submit">Check weather</button>
+      </form>
+      <p id="weather-message" class="message" role="status">Search for a city to see its current weather.</p>
+      <div id="weather-result" class="weather-result" hidden></div>
+    </section>
+
+    <section class="panel movies-panel" id="movies">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">TONIGHT'S WATCHLIST</p>
+          <h2>Movie search</h2>
+        </div>
+        <span class="round-icon" aria-hidden="true">▶</span>
+      </div>
+      <form id="movie-form" class="search-form">
+        <label class="sr-only" for="movie-input">Movie title</label>
+        <input id="movie-input" name="movie" type="text" placeholder="Search a movie, e.g. Inception" autocomplete="off" required>
+        <button type="submit">Find movies</button>
+      </form>
+      <p id="movie-message" class="message" role="status">Search by title to find posters, ratings and release years.</p>
+      <div id="movie-results" class="movie-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made for curious days and movie nights.</p>
+  </footer>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
