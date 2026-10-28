@@ -1,0 +1,10 @@
+div{
+  background-color: lightblue;
+  color: black;
+}
+    button{
+      color: white;
+      background-color: blue;
+      text-align: center;
+      font-size: 24px;
+    }
